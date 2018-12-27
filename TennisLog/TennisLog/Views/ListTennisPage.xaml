@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TennisLog.ViewModels" Title="List of all tennis you played"
+             x:Class="TennisLog.Views.ListTennisPage">
+
+    <ContentPage.Content>
+        <Label Text="All Tennis Play List" Margin="10" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
+    </ContentPage.Content>
+        
+    <ListView x:Name="MyListView" ItemTapped="Handle_ItemTapped" Margin="10" >
+        <ListView.Header>
+            <Label Text="Play List" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Margin="10"/>            
+        </ListView.Header>
+       
+        <ListView.ItemTemplate>
+          <DataTemplate>                
+              <ViewCell>                    
+                  <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                   
+                    <Label Text="{Binding Title}" WidthRequest="100" LineBreakMode="WordWrap" FontAttributes="Bold" />
+                    <Label Text="{Binding PlayDateString}" WidthRequest="100" />
+                    <Label Text="{Binding PlayStartTime, Converter={StaticResource timeSpanToString}}" WidthRequest="70" />
+                    <Label Text="{Binding PlayEndTime, Converter={StaticResource timeSpanToString}}" WidthRequest="70" />
+                    
+                  </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+    </ListView.ItemTemplate> 
+    
+    </ListView>
+</ContentPage>

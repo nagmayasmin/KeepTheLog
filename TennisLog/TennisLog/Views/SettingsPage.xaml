@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TennisLog.Views.SettingsPage"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+             
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Margin="40">
+
+                <Label FontSize="Large" Text="Adjust your app settings and preferences as needed."/>
+                <!--     <Label Text="Maximum articles to display:"/>
+                <Slider x:Name="articleCountSlider" Minimum="0" Maximum="20"/> -->
+                <Label Text="Enter your display name:"/>
+                <Entry x:Name="displayName" Text="{Binding DisplayName}" />
+
+                <controls:CircleImage WidthRequest="100"  HeightRequest="100" Source="{Binding ProfileImageUrl}" Aspect="AspectFit" />
+
+                <Label Text="My bio:"/>
+                <Editor HeightRequest="160" Text="{Binding BioContent}" />
+                <Label Text="Select a default Sports category:"/>
+                <Picker x:Name="categoryPicker">
+                    <Picker.Items>
+                        <x:String>Soccer</x:String>
+                        <x:String>Baseball</x:String>
+                        <x:String>Tennis</x:String>
+                        <x:String>Basket Ball</x:String>
+                        <x:String>Football</x:String>
+                        <x:String>Others</x:String>
+                    </Picker.Items>
+                    <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                </Picker>
+                <Button Text="Save" HorizontalOptions="Center" VerticalOptions="Center"  WidthRequest="130" HeightRequest="60" CornerRadius="10" Clicked="Save_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

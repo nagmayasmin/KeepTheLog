@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TennisLog.ViewModels"
+             xmlns:converter="clr-namespace:TennisLog.Converter"
+             x:Class="TennisLog.Views.DataEntryPage">
+    
+    <ContentPage.BindingContext>
+        <vm:AddPlayListViewModel />
+    </ContentPage.BindingContext>
+
+      
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand">
+            <Label Text="Add Play" FontSize="Medium" Margin="10" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
+            <StackLayout Orientation="Vertical" Spacing="10" Padding="10" VerticalOptions="CenterAndExpand"  HorizontalOptions="FillAndExpand">
+                
+                <Label Text="Select a day" HorizontalOptions="StartAndExpand" />
+               
+                <Picker Title="Select a day" SelectedItem="{Binding Title}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Monday</x:String>
+                            <x:String>Tuesday</x:String>
+                            <x:String>Wednesday</x:String>
+                            <x:String>Thursday</x:String>
+                            <x:String>Friday</x:String>
+                            <x:String>Saturday</x:String>
+                            <x:String>Sunday</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Date:" HorizontalOptions="StartAndExpand" />
+                <DatePicker x:Name="playDatePicker" Date="{Binding PlayDate}" MinimumDate="{Binding Converter={StaticResource dateTimeToNow}}" />
+                <Label Text="Starts at:" HorizontalOptions="StartAndExpand" />
+                <TimePicker Time="{Binding PlayStartTime}"  />
+
+                <Label Text="Ends at:" HorizontalOptions="StartAndExpand" />
+                <TimePicker Time="{Binding PlayEndTime}" />
+                
+                <Button Text="Done" FontSize="16" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" Command="{Binding AddPlayList}"/>
+                <Button Text="Cancel" FontSize="16" FontAttributes="Bold" BackgroundColor="Gray" TextColor="White" Command="{Binding Cancel}"/>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

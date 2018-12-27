@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisLog.Android", "TennisLog\TennisLog.Android\TennisLog.Android.csproj", "{1555D7D2-DF90-4094-A192-D91AB7C83B91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisLog", "TennisLog\TennisLog\TennisLog.csproj", "{FC69FB9D-6FF8-471F-B849-18A4AFDBA1AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1555D7D2-DF90-4094-A192-D91AB7C83B91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1555D7D2-DF90-4094-A192-D91AB7C83B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1555D7D2-DF90-4094-A192-D91AB7C83B91}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1555D7D2-DF90-4094-A192-D91AB7C83B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1555D7D2-DF90-4094-A192-D91AB7C83B91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1555D7D2-DF90-4094-A192-D91AB7C83B91}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FC69FB9D-6FF8-471F-B849-18A4AFDBA1AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC69FB9D-6FF8-471F-B849-18A4AFDBA1AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC69FB9D-6FF8-471F-B849-18A4AFDBA1AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC69FB9D-6FF8-471F-B849-18A4AFDBA1AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18D99F86-34F7-46F3-A97B-48CF461C060B}
+	EndGlobalSection
+EndGlobal

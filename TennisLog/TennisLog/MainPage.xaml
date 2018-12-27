@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TennisLog" Title="Tennis Logs"
+             xmlns:views="clr-namespace:TennisLog.Views"
+             x:Class="TennisLog.MainPage">
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Settings" Icon="icon_settings.png" Order="Primary" Clicked="OnSettingsClicked"/>
+    </TabbedPage.ToolbarItems>
+
+    <TabbedPage.Children>
+        <views:DataEntryPage Icon="add_button.png" Title="Add Tennis Hrs" />
+        <views:ListTennisPage Icon="PlayerListWindow.png" Title="All Tennis Game"  />
+        <views:FavGamePage Icon="Fav.png" Title="Favorite" />
+    </TabbedPage.Children>
+
+</TabbedPage>
